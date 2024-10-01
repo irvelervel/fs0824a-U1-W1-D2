@@ -4,12 +4,81 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Seconda giornata HTML</title>
+    <style>
+      table {
+        /* un bordo generico intorno all'intera tabella */
+        border: 1px solid black;
+        /* fa in modo che in caso di due bordi ravvicinati, si compattino in un unico bordo */
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        /* un bordo anche alla singola cella */
+        border: 1px solid black;
+        /* un padding alla singola cella */
+        padding: 5px;
+      }
+    </style>
   </head>
   <body>
     <header>
       <h1>Tabelle e Forms</h1>
+      <h2>Seconda (e ultima) giornata di HTML</h2>
     </header>
-    <main></main>
+    <main>
+      <table>
+        <!-- anche una tabella si può dividere in più parti -->
+        <!-- thead, tbody, tfoot -->
+        <thead>
+          <caption>
+            Professionisti del settore
+          </caption>
+          <!-- una tabella si divide innanzitutto in RIGHE -->
+          <!-- solitamente nel thead ci va solo UNA riga, quella di instestazione -->
+          <tr>
+            <!-- table row -->
+            <th>
+              <!-- nomi dei campi -->
+              Nome
+            </th>
+            <th>Cognome</th>
+            <th>Età</th>
+            <th>Professione</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- qui dentro ci vanno i DATI -->
+          <tr>
+            <!-- una riga per ogni elemento della tabella, cioè ogni persona -->
+            <td>
+              <!-- questo td andrà in colonna al primo th -->
+              Mario
+            </td>
+            <td>Rossi</td>
+            <td>20</td>
+            <td>Idraulico</td>
+          </tr>
+          <tr>
+            <!-- una riga per ogni elemento della tabella, cioè ogni persona -->
+            <td>
+              <!-- questo td andrà in colonna al primo th -->
+              Luigi
+            </td>
+            <td>Verdi</td>
+            <td>25</td>
+            <td>Programmatore</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Età media</td>
+            <!-- questo secondo <td> va a finire in TERZO slot,
+                perchè il primo <td> vale 2 grazie al colspan -->
+            <td>22,5</td>
+          </tr>
+        </tfoot>
+      </table>
+    </main>
     <footer></footer>
   </body>
 </html>
