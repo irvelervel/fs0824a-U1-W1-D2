@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esempio di form</title>
+  </head>
+  <body>
+    <header>
+      <h1>Iscriviti alla nostra newsletter!</h1>
+    </header>
+    <main>
+      <form onsubmit="alert('Form Inviato!')">
+        <div>
+          <!-- questo contenitore conterrà 2 elementi (tipicamente) -->
+          <!-- un'ETICHETTA -->
+          <label for="name-field">Inserisci il tuo nome</label>
+          <!-- il valore dell'attributo "for" della label è sempre lo stesso
+           del valore dell'attributo "id" dell'input -->
+          <input
+            type="text"
+            id="name-field"
+            placeholder="Mario Rossi"
+            required
+          />
+          <!-- l'attributo required richiede che quel campo venga COMPILATO necessariamente -->
+          <!-- inserire type="text" o non inserire alcun type è la stessa cosa -->
+        </div>
+        <div>
+          <!-- questo contenitore conterrà 2 elementi (tipicamente) -->
+          <!-- un'ETICHETTA -->
+          <label for="phone-field">Inserisci il tuo n. di telefono</label>
+          <!-- il valore dell'attributo "for" della label è sempre lo stesso
+           del valore dell'attributo "id" dell'input -->
+          <input
+            type="tel"
+            id="phone-field"
+            placeholder="329xxxxxxxxx"
+            required
+          />
+        </div>
+        <div>
+          <!-- questo contenitore conterrà 2 elementi (tipicamente) -->
+          <!-- un'ETICHETTA -->
+          <label for="email-field">Inserisci la tua email</label>
+          <!-- il valore dell'attributo "for" della label è sempre lo stesso
+           del valore dell'attributo "id" dell'input -->
+          <input
+            type="email"
+            id="email-field"
+            placeholder="mario@rossi.com"
+            required
+          />
+        </div>
+        <div>
+          <!-- questo contenitore conterrà 2 elementi (tipicamente) -->
+          <!-- un'ETICHETTA -->
+          <label for="age-field">Inserisci la tua età</label>
+          <!-- il valore dell'attributo "for" della label è sempre lo stesso
+           del valore dell'attributo "id" dell'input -->
+          <input type="number" id="age-field" required min="0" max="99" />
+        </div>
+        <div>
+          <!-- questo contenitore conterrà 2 elementi (tipicamente) -->
+          <!-- un'ETICHETTA -->
+          <label for="bio-field">Inserisci la tua biografia</label>
+          <!-- il valore dell'attributo "for" della label è sempre lo stesso
+           del valore dell'attributo "id" dell'input -->
+          <textarea
+            id="bio-field"
+            rows="10"
+            required
+            placeholder="Mi chiamo Mario e ho trentordici anni"
+          ></textarea>
+        </div>
+        <div>
+          <label for="food-field">Pizza, Pesce o Carne?</label>
+          <select id="food-field">
+            <option>Pizza</option>
+            <option>Pesce</option>
+            <option>Carne</option>
+          </select>
+        </div>
+        <!-- questo button è DENTRO un form! -->
+        <!-- di default NON avrà il type="button", ma un type="submit" -->
+        <button>Registrati!</button>
+        <button type="reset">Resetta</button>
+      </form>
+    </main>
+    <footer>EPICODE - 2024</footer>
+  </body>
+</html>
